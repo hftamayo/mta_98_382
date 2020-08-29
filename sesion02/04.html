@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+    <head>
+        <title>Datos del cliente</title>
+        
+        <style>
+            fieldset {
+            background-color: #eeeeee;
+            max-width: 300px;
+            }
+
+            legend {
+            background-color: gray;
+            color: white;
+            padding: 5px 10px;
+            }
+
+            input {
+            margin: 5px;
+            }        
+        </style>        
+    </head>
+    <body>
+        <form name="frmcliente" onsubmit = "return(validar());">
+        <label for="txtnombres">Nombres:</label><br />
+        <input type="text" id="txtnombres" name="txtnombres"><br />
+        
+        <label for="txtapellidos">Apellidos:</label><br />
+        <input type="text" id="txtapellidos" name="txtapellidos"><br />
+
+        <label for="txtedad">Edad:</label><br />
+        <input type="text" id="txtedad" name="txtedad"><br />
+        
+        <fieldset>
+        <legend>Ventas efectuadas Producto Azul</legend>
+        
+        <label for="txtproducto1">Cantidad productos vendidos:</label><br />
+        <input type="text" id="txtproducto1" name="txtventas"><br />
+        
+        <label for="txtproducto2">Precio de cada item vendido:</label><br />
+        <input type="text" id="txtproducto2" name="txtprecio"><br />        
+        </fieldset>
+
+         <input type="submit" value="Enviar" name="btnenviar">        
+        </form> 
+    </body>
+</html>
