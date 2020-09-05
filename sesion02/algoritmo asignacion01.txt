@@ -1,0 +1,13 @@
+PROCESO PARA ABORDAR ASIGNACION 1:
+
+1. verificar como voy a pasar los datos del formulario HTML hacia JS
+
+2. definir las variables necesarias para recibir la data que proviene del HTML (David: getElement(), utilizando una referencia absoluta)
+
+3. Se sugiere mandar a imprimir a la consola o por medio de un alert el contenido de las variables para verificar que efectivamente la data esta capturada
+
+4. para ejecutar los calculos puede ser util consultar el tipo de datos de cada variable (typeof)
+
+5. calcular año de nacimiento, calcular venta total, calcular comision
+
+6. generar la salida de datos por medio de un alert
