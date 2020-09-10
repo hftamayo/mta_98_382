@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+    <head>
+        <title>Formato especial para tipos de datos numericos</title>
+
+        <style>
+
+            input {
+            margin: 5px;
+            }
+        </style>
+
+    </head>
+    <body>
+        <form name="frmsalarios" onsubmit = "return (convertir());">
+        
+        <label for="txtnombres">Digite la cantidad:</label><br />
+        <input type="text" id="txtcantidad" name="txtcantidad"><br />
+
+        <input type="radio" id="miles" name="conversion" value="miles">
+        <label for="miles">Miles</label><br>
+
+        <input type="radio" id="moneda" name="conversion" value="moneda">
+        <label for="moneda">Moneda</label><br>
+
+        <input type="radio" id="euro" name="conversion" value="euro">
+        <label for="euro">Euros</label> <br>
+
+         <input type="submit" value="Enviar" name="btnenviar">
+
+        </form>
+    </body>
+
+    <script type = "text/javascript">
+    
+        function convertir(){
+            let cantidad = document.getElementById("txtcantidad").value;
+            let conversion = document.frmsalarios.conversion.value;
+            let conversionCantidad = "";
+            //alert("los datos de entrada son: " + cantidad + conversion);
+            
+            if(conversion == "miles"){
+                conversionCantidad = formatoNumero(cantidad);
+            }
+            else if(conversion == "moneda"){
+                conversionCantidad = formatoMoneda(cantidad);
+            }
+            else {
+                conversionCantidad = formatoEuro(cantidad);
+            }
+            
+            alert (conversionCantidad);
+            
+        }
+    
+     
+        function formatoNumero(numero) {
+            return numero.toString().replace(/(\d)(?=(\d{3})+(?!\d))/g, '$1,');
+        }
+
+        function formatoMoneda(numero) {
+            return '$' + parseFloat(numero).toFixed(2).replace(/(\d)(?=(\d{3})+(?!\d))/g, '$1,');
+        }
+
+        function formatoEuro(numero) {
+            return (
+                parseFloat(numero)
+                .toFixed(2)
+                .replace('.', ',')
+                .replace(/(\d)(?=(\d{3})+(?!\d))/g, '$1.') + ' €'
+            );
+        }
+  </script>
+
+</html>
