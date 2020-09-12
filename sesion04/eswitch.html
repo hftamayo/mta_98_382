@@ -8,15 +8,15 @@
     <h1>Uso de la estructura de control Switch</h1>
     <pre>
       <code>
-      let suma = 4 + 5;
+      let suma = 1000 + 1000;
       switch (suma) {
-        case 3:
+        case <= 100:
           document.getElementById('resultado').innerHTML = 'Necesita aumentar monto';
           break;
-        case 9:
+        case <= 300:
           document.getElementById('resultado').innerHTML = 'Valor minimo esperado';
           break;
-        case 15:
+        case <= 500:
           document.getElementById('resultado').innerHTML = 'Informe a Gerencia';
           break;
         default:
@@ -27,15 +27,15 @@
   <div id="resultado"></div>
   </body>
   <script>
-  let suma = 4 + 5;
+  let suma = 1000 + 1000;
   switch (suma) {
-    case 3:
+    case <= 100:
       document.getElementById('resultado').innerHTML = 'Necesita aumentar monto';
       break;
-    case 9:
+    case <= 300:
       document.getElementById('resultado').innerHTML = 'Valor minimo esperado';
       break;
-    case 15:
+    case <= 500:
       document.getElementById('resultado').innerHTML = 'Informe a Gerencia';
       break;
     default:
