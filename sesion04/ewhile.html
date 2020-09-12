@@ -1,0 +1,40 @@
+<html>
+  <head>
+    <title>Ejercicios sobre Estructuras de Control</title>
+    <meta content="">
+    <style></style>
+  </head>
+  <body>
+    <h1>Uso de la estructura de control While</h1>
+    <pre>
+      <code>
+        let limite = 15;
+        let suma = 0;
+        let contador = 1;
+        let arreglo = [15];
+
+        while(contador <= limite) {
+          suma += contador;
+          arreglo[contador-1] = contador;
+          contador++;
+        }
+        document.getElementById('resultado').innerHTML = arreglo + " = " +suma;        
+    </code>
+  </pre>
+  <div id="resultado"></div>
+  </body>
+  <script>
+  let limite = 15;
+  let suma = 0;
+  let contador = 1;
+  let arreglo = [15];
+
+  while(contador <= limite) {
+    suma += contador;
+    arreglo[contador-1] = contador;
+    contador++;
+  }
+  document.getElementById('resultado').innerHTML = arreglo + " = " +suma;
+
+  </script>
+</html>

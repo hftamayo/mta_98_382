@@ -1,0 +1,49 @@
+<html>
+  <head>
+    <title>Ejercicios sobre Estructuras de Control</title>
+    <meta content="">
+    <style></style>
+  </head>
+  <body>
+    <h1>Uso de if anidados</h1>
+    <pre>
+      <code>
+        let suma = 35;
+        let condicionEjecutada = "";
+        if (suma % 10 == 0){
+            condicionEjecutada = "a";
+        } else if (suma % 2 == 1){
+            if (suma % 5 == 0 && suma % 2 == 0){
+              condicionEjecutada = "b";
+            } else if (suma % 5 == 0){
+                condicionEjecutada = "c";
+            } else {
+                condicionEjecutada = "d";
+            }
+        } else {
+            condicionEjecutada = "e";
+        }
+        document.getElementById('resultado').innerHTML = condicionEjecutada;
+    </code>
+  </pre>
+  <div id="resultado"></div>
+  </body>
+  <script>
+  let suma = 35;
+  let condicionEjecutada = "";
+  if (suma % 10 == 0){
+      condicionEjecutada = "a";
+  } else if (suma % 2 == 1){
+      if (suma % 5 == 0 && suma % 2 == 0){
+        condicionEjecutada = "b";
+      } else if (suma % 5 == 0){
+          condicionEjecutada = "c";
+      } else {
+          condicionEjecutada = "d";
+      }
+  } else {
+      condicionEjecutada = "e";
+  }
+  document.getElementById('resultado').innerHTML = condicionEjecutada;
+  </script>
+</html>

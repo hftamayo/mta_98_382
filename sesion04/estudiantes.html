@@ -1,0 +1,54 @@
+<html>
+  <head>
+    <title>Listado de Estudiantes</title>
+    <meta content="">
+    <style></style>
+  </head>
+  <body>
+    <h1>Listado de estudiantes a graduarse </h1>
+    <form name="frmestudiantes" onsubmit="return actualizarListado()">
+        <div id="listaestudiantes"></div>
+        <input type ="radio" name="operaciones" id="primero" value="primero">
+        <label for="primero">Eliminar primer elemento</label><br />
+
+        <input type ="radio" name="operaciones" id="ultimo" value="ultimo">
+        <label for="primero">Eliminar ultimo elemento</label><br />
+
+        <input type ="radio" name="operaciones" id="agrprimero" value="agrprimero">
+        <label for="agrprimero">Agregar un elemento al inicio</label><br />
+
+        <button type="submit">Actualizar</button>
+    </form>
+  </body>
+  <script>
+  let estudiantes = ['Lionel Messi', 'Luis Suarez', 'Gerard Pique', 'Jordi Alba', 'Sergi Roberto'];
+  document.getElementById('listaestudiantes').innerHTML = estudiantes + " TOTAL: " + estudiantes.length;
+
+  function actualizarListado(){
+    let operacion = document.frmestudiantes.operaciones.value;
+    if(operacion == 'primero'){
+        estudiantes.shift();
+    }
+    else if(operacion == 'ultimo'){
+        estudiantes.pop();
+    }
+    else if(operacion == 'agrprimero'){
+        estudiantes.unshift('Nuevo');
+    }
+    //agregar un valor al final
+
+    //crear copia exacta
+
+    //inversa del arreglo
+
+    //trasladar los valores del arreglo y pasarlos a una cadena
+
+    //extraer un resultado en base a su ubicacion
+
+
+    //considerar otro mecanismo para salida de datos
+  document.getElementById('listaestudiantes').innerHTML = nuevoEstudiantes + " TOTAL: " + estudiantes.length;
+  }
+
+  </script>
+</html>
