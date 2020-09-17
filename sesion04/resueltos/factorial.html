@@ -1,0 +1,33 @@
+<html>
+  <head>
+    <title>Factorial de un numero</title>
+    <meta content="">
+    <style></style>
+  </head>
+  <body>
+    <h1>Calcular el factorial de un nuemro</h1>
+    <pre>
+      <code>
+        const numero = 4;
+        let factorial = 1;
+        let arrFactores = new Array();
+        for(let i = numero; i > 0; i--){
+          arrFactores[i-1] = (factorial + "*" + i + "=" + (factorial * i)); 
+          factorial *= i;
+        }
+        document.getElementById('resultado').innerHTML = factorial + " iteraciones: " + arrFactores;
+    </code>
+  </pre>
+  <div id="resultado"></div>
+  </body>
+  <script>
+    const numero = 4;
+    let factorial = 1;
+    let arrFactores = new Array();
+    for(let i = numero; i > 0; i--){
+      arrFactores[i-1] = (factorial + "*" + i + "=" + (factorial * i)); 
+      factorial *= i;
+    }
+    document.getElementById('resultado').innerHTML = factorial + " iteraciones: " + arrFactores;
+  </script>
+</html>

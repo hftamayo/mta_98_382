@@ -1,0 +1,57 @@
+<html>
+  <head>
+    <title>Factorial de un numero</title>
+    <meta content="">
+    <style></style>
+  </head>
+  <body>
+    <h1>Calcular el factorial de un nuemro</h1>
+    <pre>
+      <code>
+        const numero = 23;
+        let divisor = 1;
+        let esPrimo = true;
+        let arrOperaciones = new Array();
+        let i = 0;
+        do{
+            if(numero % divisor ==0){
+                esPrimo = false;
+                arrOperaciones[i] = (numero + " % " + divisor + " = " + (numero % divisor)) + "-";
+            }
+            else{
+                arrOperaciones[i] = (numero + " % " + divisor + " = " + (numero % divisor)) + "-";
+            }
+            divisor++;
+            i++;
+        }while(divisor <= numero)
+    
+        //por que esPrimo siempre cambia a false?
+    
+        document.getElementById('resultado').innerHTML = esPrimo + " iteraciones: " + arrOperaciones;
+    </code>
+  </pre>
+  <div id="resultado"></div>
+  </body>
+  <script>
+    const numero = 23;
+    let divisor = 1;
+    let esPrimo = true;
+    let arrOperaciones = new Array();
+    let i = 0;
+    do{
+        if(numero % divisor ==0){
+            esPrimo = false;
+            arrOperaciones[i] = (numero + " % " + divisor + " = " + (numero % divisor)) + "-";
+        }
+        else{
+            arrOperaciones[i] = (numero + " % " + divisor + " = " + (numero % divisor)) + "-";
+        }
+        divisor++;
+        i++;
+    }while(divisor <= numero)
+
+    //por que esPrimo siempre cambia a false?
+
+    document.getElementById('resultado').innerHTML = esPrimo + " iteraciones: " + arrOperaciones;
+  </script>
+</html>
