@@ -8,11 +8,11 @@
     <h1>Calcular el factorial de un nuemro</h1>
     <pre>
       <code>
-        const numero = 4;
+        const numero = 5;
         let factorial = 1;
         let arrFactores = new Array();
         for(let i = numero; i > 0; i--){
-          arrFactores[i-1] = (factorial + "*" + i + "=" + (factorial * i)); 
+          arrFactores[i-1] = (factorial + "*" + i + "=" + (factorial * i));
           factorial *= i;
         }
         document.getElementById('resultado').innerHTML = factorial + " iteraciones: " + arrFactores;
@@ -21,11 +21,11 @@
   <div id="resultado"></div>
   </body>
   <script>
-    const numero = 4;
+    const numero = 5;
     let factorial = 1;
     let arrFactores = new Array();
     for(let i = numero; i > 0; i--){
-      arrFactores[i-1] = (factorial + "*" + i + "=" + (factorial * i)); 
+      arrFactores[i-1] = (factorial + "*" + i + "=" + (factorial * i));
       factorial *= i;
     }
     document.getElementById('resultado').innerHTML = factorial + " iteraciones: " + arrFactores;
