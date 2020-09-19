@@ -1,0 +1,39 @@
+<html>
+  <head>
+    <title>Suma de numeros pares en una serie</title>
+    <meta content="">
+    <style></style>
+  </head>
+  <body>
+    <h1>Suma de numeros pares en una serie</h1>
+    <pre>
+      <code>
+        const limite = 14;
+        let arrFactores = new Array();
+        let sumatoria = 0;
+        for(let i = 2; i <= limite; i++){
+          if((i % 2 == 0)){
+            arrFactores[i-1] = i;
+            sumatoria += i;
+          }
+        }
+        //depurar las comas que corresponden a los numeros impares
+        document.getElementById('resultado').innerHTML = arrFactores + " suma: " + sumatoria;
+    </code>
+  </pre>
+  <div id="resultado"></div>
+  </body>
+  <script>
+  const limite = 14;
+  let arrFactores = new Array();
+  let sumatoria = 0;
+  for(let i = 2; i <= limite; i++){
+    if((i % 2 == 0)){
+      arrFactores[i-1] = i;
+      sumatoria += i;
+    }
+  }
+  //depurar las comas que corresponden a los numeros impares
+  document.getElementById('resultado').innerHTML = arrFactores + " suma: " + sumatoria;
+  </script>
+</html>

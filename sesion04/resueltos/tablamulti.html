@@ -1,0 +1,30 @@
+<html>
+  <head>
+    <title>Tabla de multiplicar de un numero dado</title>
+    <meta content="">
+    <style></style>
+  </head>
+  <body>
+    <h1>Tabla de multiplicar de un numero dado</h1>
+    <pre>
+      <code>
+        const numero = 6;
+        let arrFactores = new Array();
+        for(let i = 1; i <= 10; i++){
+          arrFactores[i-1] = (numero + "*" + i + "=" + (numero * i));
+        }
+        document.getElementById('resultado').innerHTML = arrFactores;
+    </code>
+  </pre>
+  <div id="resultado"></div>
+  </body>
+  <script>
+  const numero = 6;
+  let arrFactores = new Array();
+  for(let i = 1; i <= 10; i++){
+    arrFactores[i-1] = (numero + "*" + i + "=" + (numero * i));
+  }
+  document.getElementById('resultado').innerHTML = arrFactores;
+
+  </script>
+</html>

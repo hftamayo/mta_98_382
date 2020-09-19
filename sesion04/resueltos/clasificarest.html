@@ -1,0 +1,55 @@
+<html>
+  <head>
+    <title>Determinacion del ranking academico</title>
+    <meta content="">
+    <style></style>
+  </head>
+  <body>
+    <h1>Determinacion del ranking academico</h1>
+    <pre>
+      <code>
+        const notaFinal = 7.5;
+        let ranking = "";
+        if( notaFinal >= 9 ){
+          ranking = "Muy Bueno";
+        }
+        else if( notaFinal >= 7 ){
+          ranking = "bueno";
+        }
+        else if( notaFinal >= 6 ){
+          ranking = "necesita mejorar";
+        }
+        else if( notaFinal >= 5){
+          ranking = "por debajo de lo esperado"
+        }
+        else{
+          ranking = "reprobado";
+        }
+
+        document.getElementById('resultado').innerHTML = ranking;
+    </code>
+  </pre>
+  <div id="resultado"></div>
+  </body>
+  <script>
+  const notaFinal = 9.0;
+  let ranking = "";
+  if( notaFinal >= 9 ){
+    ranking = "Muy Bueno";
+  }
+  else if( notaFinal >= 7 ){
+    ranking = "bueno";
+  }
+  else if( notaFinal >= 6 ){
+    ranking = "necesita mejorar";
+  }
+  else if( notaFinal >= 5){
+    ranking = "por debajo de lo esperado"
+  }
+  else{
+    ranking = "reprobado";
+  }
+
+  document.getElementById('resultado').innerHTML = ranking;
+  </script>
+</html>
