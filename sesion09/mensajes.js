@@ -6,12 +6,12 @@ function mensaje01() {
   
   
 function mensaje02() {
-    var mensaje = "Hola Mundo v2;
+    var mensaje = "Hola Mundo v2";
     alert (mensaje);
   }  
   
 
-funcion mensaje03() {
+function mensaje03() {
     var mensaje = "Hola Mundo v3";
     alert (mensaje);
   }  
