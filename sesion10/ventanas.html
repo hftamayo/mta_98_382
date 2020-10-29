@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<head>
+<script>
+var ventana;
+function abrirVentana() {
+  ventana = window.open("", "", "width=400, height=200");
+  ventana.blur();
+}
+function blurVentana() {
+  ventana.blur();
+}
+function focusVentana() {
+  ventana.focus();
+}
+</script>
+</head>
+<body>
+
+<input type="button" value="Abrir" onclick="abrirVentana()">
+<input type="button" value="Blur" onclick="blurVentana()">
+<input type="button" value="Foco" onclick="focusVentana()">
+
+</body>
+</html>
+ 
