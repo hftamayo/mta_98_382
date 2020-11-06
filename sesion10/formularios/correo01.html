@@ -1,9 +1,12 @@
 <html>
+    <head>
+        <script src="validaciones.js"></script>
+    </head>
     <body>
-        <form>
+        <form name="frmcorreo" id="frmcorreo" method="post" onsubmit="validar01()" action="correo.php">
         <label for="correo">digite su correo electronico:</label>
         <input type="email" id="correo" name="correo">
-        <button>Submit</button>
+        <button>Enviar</button>
         </form>
     </body>
 </html>

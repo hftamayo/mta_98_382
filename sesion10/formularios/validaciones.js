@@ -1,35 +1,45 @@
 //correo01
-const email = document.getElementById("correo");
+function validar01(){
+    alert("inicio de la funcion validar01");
+    return false;
+    /*
+    const email = document.getElementById("correo");
 
-email.addEventListener("input", function (event) {
-  if (email.validity.typeMismatch) {
-    email.setCustomValidity("Se requiere una direccion de correo valida");
-  } else {
-    email.setCustomValidity("");
-  }
-});
+    email.addEventListener("input", function (event) {
+    if (email.validity.typeMismatch) {
+        email.setCustomValidity("Se requiere una direccion de correo institucional valida");
+    } else {
+        email.setCustomValidity("");
+    }
+    });*/
+    
+}//fin de validar correo01.html
+
 
 //correo02
-const email = document.getElementById('correo');
+function validar02(){
+    const email = document.getElementById('correo');
 
-email.addEventListener('input', function (event) {
+    email.addEventListener('input', function (event) {
 
 
-  if (email.validity.valid) {
-    emailError.innerHTML = ''; 
-    emailError.className = 'error'; 
-  } else {
-    showError();
-  }
-});
+    if (email.validity.valid) {
+        emailError.innerHTML = ''; 
+        emailError.className = 'error'; 
+    } else {
+        showError();
+    }
+    });
 
-form.addEventListener('submit', function (event) {
+    form.addEventListener('submit', function (event) {
 
-  if(!email.validity.valid) {
-    showError();
-    event.preventDefault();
-  }
-});
+    if(!email.validity.valid) {
+        showError();
+        event.preventDefault();
+    }
+    });
+}//fin de validar02
+
 
 function showError() {
   if(email.validity.valueMissing) {
