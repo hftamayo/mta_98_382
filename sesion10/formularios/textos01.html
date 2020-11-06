@@ -1,0 +1,33 @@
+<html>
+    <head>
+        <title>Validacion de formularios: objetos tipo texto</title>
+        <script type="text/javascript">
+        function validar () {
+            validar = true;
+
+            if ( document.frmnueempleado.txtnombre.value == ""){
+                alert ( "El nombre no puede quedar en blanco" );
+                validar = false;
+            }
+            
+            /* por hacer: 
+            1. validar de manera separada: nombres apellidos, direccion, depto de residencia
+            2. casos de validacion: en blanco, no menor a 5 caracteres
+            3. depto de residencia debe ser en un combobox, se sugiere iniciar validacion con un textbox
+            4. document.frmnueempleado.txtnombre.value es la mejor manera de validar el DOM?
+            */
+            
+        return validar;
+        }            
+    </head>
+    <body>
+        <form name="frmnueempleado" method="post" action="agrempleado.php" onsubmit="return validar();">
+        <h1>Datos del Empleado</h1>
+
+        <p>Nombre Completo: <input type="text" name="txtnombre"></p>
+        <p><input type="submit" name="btnagregar" value="Agregar"></p>
+        </form>
+    </body>
+</html>
+
+ 

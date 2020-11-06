@@ -1,0 +1,24 @@
+<form id="validarCorreo">
+  <input type="email" id="txtcorreo" required>
+  <button id="btnok" disabled>Validar</button>
+</form>
+
+<script>
+const formulario = document.getElementById('validarCorreo');
+const correo = document.getElementById('txtcorreo');
+const okBtn = document.getElementById('btnok');
+  
+txtcorreo.addEventListener('keyup', function (event) {
+  esValido = correo.checkValidity();
+  
+  if ( esValido ) {
+    okBtn.disabled = false;
+  } else {
+    okBtn.disabled = true;
+  }
+});
+  
+okBtn.addEventListener('click', function (event) {
+  formulario.submit();
+});
+</script> 
