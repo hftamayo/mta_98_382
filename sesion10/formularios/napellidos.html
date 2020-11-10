@@ -1,0 +1,29 @@
+<html>
+    <head>
+        <title>Validacion de formularios: objetos tipo texto</title>
+        <script type="text/javascript">
+            function validar () {
+                if ( document.frmnueempleado.txtnombre.value == ""){
+                    alert ("El nombre no puede quedar en blanco");
+                    validar = false;
+                }
+                
+                 if ( document.frmnueempleado.txtnombre.value.length < 5){
+                    alert ("La longitud del apellido debe ser mayor a 5 caracteres");
+                    validar = false;
+                }
+                
+            return validar;
+            }            
+        </script>
+    </head>
+    <body>
+        <form name="frmnueempleado" method="post" action="agrempleado.php" onsubmit="return validar();">
+        <h1>Datos del Empleado</h1>
+        <p>Nombre Completo: <input type="text" name="txtnombre"></p>
+        <p><input type="submit" name="btnagregar" value="Agregar"></p>
+        </form>
+    </body>
+</html>
+
+ 

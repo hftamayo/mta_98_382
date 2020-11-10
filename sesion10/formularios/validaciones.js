@@ -1,17 +1,25 @@
 //correo01
 function validar01(){
-    alert("inicio de la funcion validar01");
-    return false;
-    /*
-    const email = document.getElementById("correo");
+    //alert("inicio de la funcion validar01");
 
+    const email = document.getElementById("correo");
+    
+        if(email.validity.valueMissing){
+            email.setCustomValidity("La direccion de correo electronico no puede quedar en blanco");
+        }
+        else{
+            email.setCustomValidity("");
+        }    
+    
     email.addEventListener("input", function (event) {
-    if (email.validity.typeMismatch) {
-        email.setCustomValidity("Se requiere una direccion de correo institucional valida");
-    } else {
-        email.setCustomValidity("");
-    }
-    });*/
+        if (email.validity.typeMismatch) {
+            email.setCustomValidity("Se requiere una direccion de correo institucional valida");
+            return false;
+        } 
+        else{
+            email.setCustomValidity("");            
+        }
+    });
     
 }//fin de validar correo01.html
 
