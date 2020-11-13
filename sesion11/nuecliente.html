@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="es">
+    <head> 
+        <link rel="stylesheet" href="clientes.css" type="text/css" />
+        <title>Nuevo empleado</title>
+    </head>
+    <body>
+        <div style="margin:0 auto; width:350px; background-color:#f39c12; border:solid 2px #800; padding:5px; text-align:left;">
+            <form method="get" id="frmnueempleado" name="frmnueempleado" action="agregar.php">
+            <p><label for="txtapellidos">Apellidos:</label><br>
+            <input type="text" size="20" name="txtapellidos" autofocus>
+            </p>
+            
+            <p><label for="txtnombres">Nombres:</label><br>
+            <input type="text" size="20" name="txtnombres" autofocus>
+            </p>
+            
+            <p><label for="cbozona">Zona de Residencia</label>&nbsp;<select name="cbozona">
+            <option value="1">Norte</option>
+            <option value="2">Sur</option>
+            <option value="3">Este</option>
+            <option value="4">Oeste</option>
+            </select>
+            </p>
+            
+            <p><label for="rdosexo">Sexo:</label>&nbsp;
+            Masculino&nbsp;<input type="radio" name="rdosexo" value="1" checked="checked">&nbsp;
+            Femenino&nbsp;<input type="radio" name="rdosexo" value="2">&nbsp;
+            </p>
+            
+            <p><label for="chkregfiscal">Posee registro fiscal?</label>&nbsp;<input type="checkbox" name="chkregfiscal">
+            </p>
+            
+            <p>
+            <label for="spinnerexperiencia">Años de experiencia con nuestros productos:</label><br>
+            <input type="number" min="1" max="10" size="2" required name="spinnerexperiencia" value="1"><br>
+            <br>
+            
+            <label for="rangdependientes">Numero de Dependientes</label><br>
+            <input type="range" min="1" max="5" size="2" required name="rangdependientes" value="1"><br>
+            </p>
+            <p><label for="txtexperiencia">Experiencia en ventas</label><br><textarea name="txtexperiencia" rows="2" cols="20"></textarea>
+            </p>
+
+            <p class="centered"><input type="submit" value="Agregar">&nbsp;<input type="reset" value="Borrar Datos">
+            </p>
+            </form>
+        </div>
+    </body>
+</html>
