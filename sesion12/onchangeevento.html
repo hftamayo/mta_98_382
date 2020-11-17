@@ -1,11 +1,20 @@
 <html>
     <head>
+    <script>
+    function fijarCursor(){
+    alert("Este evento se ejecuta antes de cargar el DOM");
+    //codigo para establecer el foco en el elemento nombreCompleto
+    //recordar comparar las funciones getElementById y una referencia absoluta
+    frmcliente.txtnombrecompleto.focus();
+    }
+    
+    </script>
     
    
     </head>
-    <body>
+    <body onload = "fijarCursor()">
     <form name="frmcliente">
-        <input type="text" placeholder="Escriba su nombre completo"
+        <input type="text" id="txtnombrecompleto" name="txtnombrecompleto" placeholder="Escriba su nombre completo"
         size="50">
         <p id="log"></p>
         <button>Enviar</button>
@@ -17,7 +26,7 @@
         nombreCompleto.onchange = actualizarMensaje;
         
         function actualizarMensaje(e) {
-        log.textContent = 'El nombre del empleado tiene: ' + ${e.target.value.length} caracter(es) + ' en total';
+        log.textContent = 'El nombre del empleado tiene: ${e.target.value.length} caracter(es) en total';
         }
     </script>
     
