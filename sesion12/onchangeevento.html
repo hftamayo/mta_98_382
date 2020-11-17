@@ -1,0 +1,25 @@
+<html>
+    <head>
+    
+   
+    </head>
+    <body>
+    <form name="frmcliente">
+        <input type="text" placeholder="Escriba su nombre completo"
+        size="50">
+        <p id="log"></p>
+        <button>Enviar</button>
+    </form>
+    <script>
+        var nombreCompleto = document.querySelector('input');
+        var log = document.getElementById('log');
+
+        nombreCompleto.onchange = actualizarMensaje;
+        
+        function actualizarMensaje(e) {
+        log.textContent = 'El nombre del empleado tiene: ' + ${e.target.value.length} caracter(es) + ' en total';
+        }
+    </script>
+    
+    </body>
+</html>
