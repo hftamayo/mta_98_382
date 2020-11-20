@@ -1,0 +1,31 @@
+var ciudades = [
+    ["Soyapango", "Apopa"],
+    ["San Martin", "Ciudad Delgado"]
+];
+
+$("#txtdepartamentos").change(function() {
+    var ciudad = this.selectedIndex - 1;
+    $("#txtdepartamentos").empty();
+    if (ciudad === -1) {
+        $("#txtciudades").attr("disabled", true);
+    } else {
+        var ciudad = datos[ciudad];
+        for (var i = 0; i < ciudades.length; i++) {
+            $("#ciudades").append($("<option></option>").text(ciudad[i]));
+        }
+        $("#ciudades").attr("disabled", false);
+    }
+});
+
+
+
+<select id="txtdepartamentos">
+    <option> </option>
+    <option> San Salvador </option>
+    <option> Santa Ana</option>
+    <option> San Miguel</option>    
+</select>
+
+<select id="txtciudades" disabled="true">
+</select>
+ 
